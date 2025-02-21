@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Named node map</title>
+</head>
+<body>
+  <img id="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhuWEja_t6lagLSioNN4Qi1CKnVdoqs-4jrn5bAgQ5NNY2lFB11lDeiAs67KthlTg_pWN12aVOvW6PsMVOgKbjryYAhasOopx9-1brVAjSgYb7XJ_mWNJdDMQyoP5rO8Lz3Q28QPC4-0gU8/s1600/loogo.png" alt="My Logo">
+  <script>
+    const logo = document.getElementById("logo");
+    const attributes = logo.attributes;
+
+    for (let attribut of attributes){
+      console.info(`${attribut.name} : ${attribut.value}`);
+    }
+  </script>
+</body>
+</html>

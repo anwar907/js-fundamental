@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    function* createNames(){
+      yield "Java";
+      yield "Script";
+      yield "JavaScript";
+    }
+
+    const names = createNames();
+
+    for(const name of names ){
+      document.writeln(`<p>Nama Fungsi ${name} </p>`)
+    }
+
+    function* bilanganGanjil(value){
+      for(let i = 1; i <= value; i++){
+        if (i % 2 === 1){
+          document.writeln(`<p>Value ${i}</p>`)
+          yield i;
+        }
+      }
+    }
+
+    const numbers = bilanganGanjil(100);
+    document.writeln(`<p>ambil satu: ${numbers.next().value}</p>`)
+    // for (const number of numbers) {
+    //   document.writeln(`<p>No: ${number}</p>`)
+    // }
+
+    function ganjilArray(value){
+      const result = [];
+
+      for(let i = 1; i <= value; i++){
+        if(i % 2 === 1){
+          document.writeln(`<p>Array biasa: ${i}</p>`)
+          result.push(i);
+        }
+      }
+
+      return result;
+    }
+
+    const nilaiGanjil = ganjilArray(100);
+    // for ( const number of nilaiGanjil){
+    //   document.writeln(`<p>Array ${number}</p>`)
+    // }
+
+    
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function hello(name, email){
+      // document.writeln(`<p>Hi ${name} my email is ${email}</p>`)
+      document.writeln(`${Number(name)} dan ${Number(email)}`)
+    }
+
+    function getFinalValue(value){
+      if(value > 90){
+        return "A";
+      } else if (value > 80){
+        return "B";
+      } else if (value > 70){
+        return "C";
+      } else if(value > 60){
+        return "D";
+      } else {
+        return "E";
+      }
+    }
+
+    const data = getFinalValue(85)
+    document.writeln(data)
+
+    hello('', '');
+    // hello('dart', 'java@mail.com');
+  </script>
+</body>
+</html>

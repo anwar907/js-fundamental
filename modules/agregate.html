@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script type="module">
+    import { Person, sum, hello} from "../modules/agregates.js";
+
+    const person = new Person("Java");
+    person.sayHello("Script");
+
+    hello("JavaScript");
+
+    console.info(sum(12, 43));
+
+  </script>
+</body>
+</html>

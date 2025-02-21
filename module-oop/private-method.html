@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Private method</title>
+</head>
+<body>
+  <script>
+    class Person {
+      say(name){
+        if(name){
+          console.info(name)
+          this.#sayWithName(name);
+        } else {
+          console.info('salah')
+          this.#sayWithoutName(name);
+        }
+      }
+
+      #sayWithoutName(){
+        console.info('Hello')
+      }
+
+      #sayWithName(name){
+        console.info(`Hi ${name}`)
+      }
+    }
+
+    const nim = new Person();
+    nim.say();
+    
+  </script>
+</body>
+</html>

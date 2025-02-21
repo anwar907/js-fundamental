@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function createUser(vehicle, car, truk){
+      
+      const transportation = `${vehicle} ${car} ${truk}`;
+      return transportation;
+    }
+
+    const transport = createUser('Ninja', 'BMW', 'Mersi');
+    console.info(transport);
+
+    function sum(...numbers){
+      debugger;
+      let total = 0;
+      for(const number of numbers){
+        total += number;
+      }
+
+      return total;
+    }
+    
+
+    console.info(sum(1, 2, 4,2, 1));
+  </script>
+</body>
+</html>

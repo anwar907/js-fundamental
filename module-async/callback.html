@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Set timeout and interval</title>
+</head>
+<body>
+  <h1 id="header"></h1>
+  <script>
+    // Set Timeout
+    {
+      function addElement(){
+      const header = document.createElement("h1");
+      header.textContent = "Belajar Async";
+
+      document.body.appendChild(header);
+    }
+
+    setTimeout(addElement, 5000);
+    console.info("program Selesai")
+    }
+    // Set Interval
+    {
+      const setTime = () => {
+        const header = document.getElementById("header");
+        header.textContent = new Date().toString();
+      }
+
+      setInterval(setTime, 1000);
+      console.info("Program complete")
+    }
+  </script>
+</body>
+</html>

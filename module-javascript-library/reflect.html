@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reflect</title>
+</head>
+<body>
+  <script>
+    const person = {}
+    Reflect.set(person, "firstname", "Java");
+    Reflect.set(person, "lastName", "script");
+
+    console.info(person);
+
+    console.info(Reflect.get(person, "firstname"))
+    console.info(Reflect.get(person, "lastName"));
+
+    console.info(Reflect.has(person, "firstname"))
+    console.info(Reflect.has(person, "lastName"))
+    console.info(Reflect.has(person, "middleName"))
+  </script>
+</body>
+</html>

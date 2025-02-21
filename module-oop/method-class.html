@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Method class</title>
+</head>
+<body>
+  <script>
+    class Person {
+      constructor(name) {
+        this.name = name;
+      }
+
+
+      sayHello(name){
+        console.info(`Hello ${name} can I call you ${this.name}`);
+      }
+    }
+
+    const cocok = new Person("Bakso");
+    console.info(cocok);
+    cocok.sayHello("Si paling akrab")
+
+    const date = new Person("Nasigoreng")
+    console.info(date);
+    date.sayHello("Hii")
+
+
+  </script>
+</body>
+</html>

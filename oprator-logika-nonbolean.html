@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+
+   console.info("hello" && '');
+   console.info("" && []);
+   console.info("0" && "NOL");
+   console.info(0 && "NOL");
+   console.info(null && "NULL")
+   console.info(undefined && "UNDIFIED");
+   console.info("undefined" && "null");
+
+   console.info("hello" || '');
+   console.info("" || []);
+   console.info("0" || "NOL");
+   console.info(0 || "NOL");
+   console.info(null || "NULL")
+   console.info(undefined || "UNDIFIED");
+   console.info("undefined" || "null");
+
+   const person = {
+    name: "",
+    email: "demo@mail.com",
+   }
+
+   console.info(person.name);
+
+   let data = person?.name ?? "ada yang salah";
+   document.writeln(data)
+
+  </script>
+  
+</body>
+</html>

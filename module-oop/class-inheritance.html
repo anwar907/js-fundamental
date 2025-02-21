@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    
+    class Employee {
+      constructor(name){
+        this.name = name;
+      }
+
+      sayHi(name){
+        console.info(`Hi ${name} can I call you ${this.name}`);
+      }
+    }
+
+    class Manager extends Employee {
+      sayHi(name){
+        console.info(`Hello ${name} how are you bos ${this.name}`);
+      }
+    }
+
+    const budy = new Employee()
+    budy.name = "Badud"
+    budy.sayHi("Jack");
+
+    const adit = new Manager()
+    adit.name = "Joki"
+    adit.sayHi("Coco")
+  </script>
+</body>
+</html>

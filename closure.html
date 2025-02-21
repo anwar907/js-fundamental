@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function createAdder(value){
+      const owner = "Java";
+      function add(params){
+        document.writeln(`<p>Address ${owner}</p>`)
+        return value + params;
+      }
+
+      return add;
+    }
+
+    const addTwo = createAdder(4);
+    document.writeln(`<p>isinya ${addTwo(20)}</p>`)
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    {
+      const regEx = /java/;
+      
+      const regEx1 = new RegExp("java");
+      const regEx2 = new RegExp(/java/);
+    }
+    
+    {
+      const name = "java script standar library module";
+      
+      const regex = /java/;
+      
+      const result = regex.exec(name);
+      console.info(result);
+      
+      const test = regex.test(name);
+      console.info(test);
+      console.info(regex.test("Tidak Ada"));
+    }
+
+    // regex modifier
+    {
+      const name = "saya belajar\nJava script\ndi module standar libaray\n yang sudah \nSaya pilih"
+      const regex3 = /^saya/igm // global dan multi line case sensitif text awal
+      const regex4 = /java/ig // global dan case sensitif
+      const regex5 = /sata/ig // local dan tidak case sensitif
+
+      let result;
+      while(( result = regex3.exec(name)) !== null){
+        console.info(result);
+      }
+
+
+    }
+
+    // advance regex
+    {
+      const regex7 = /ek[ioaeu]/ig
+
+      const name = "eko eki eka eku eke edo eko eki";
+      let result;
+      while((result = regex7.exec(name)) !== null){
+        console.info(result)
+      }
+
+    }
+
+    {
+      const name = "edi eko eki eka eku eke edo eko eki";
+      console.info(name.match(/ek[aiueo]/ig)) // bentuk array
+      console.info(name.search(/ek[aiueo]/ig)) // cari index
+      console.info(name.replace(/ek[aiueo]/i, "kamu"));
+      console.info(name.replaceAll(/ek[aiueo]/ig, "kamu"));
+      console.info(name.split(/e/ig));
+    }
+
+
+  </script>
+</body>
+</html>

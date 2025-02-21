@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Element</title>
+</head>
+<body>
+  <h1 id="judul"></h1>
+  <p id="description"></p>
+
+  <div id="content" class="content">
+    <h1>Belajar Javascript DOM</h1>
+    <p>Selamat Belajar Javascript</p>
+  </div>
+
+  <div id="section" class="section">
+    
+  </div>
+  
+  <script>
+    // Element
+    {
+      const title = document.getElementById("judul");
+      title.textContent = "Belajar Javascript DOM";
+
+      const desc = document.getElementById("description");
+      desc.textContent = "Selamat Belajar DOM jS"
+    }
+
+    // Element property
+    {
+      const content = document.getElementById("content");
+      console.info(content.id);
+      console.info(content.className);
+      console.info(content.tagName);
+      content.remove();
+    }
+
+    // Create Element
+    {
+      const section = document.getElementById("section")
+
+      const title = document.createElement("h1");
+      title.textContent = "Belajar JS ekosistem";
+      section.appendChild(title);
+    }
+
+    
+  </script>
+</body>
+</html>
